@@ -7,6 +7,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Greenkeeper badge](https://badges.greenkeeper.io/claylo/yaml-include.svg)](https://greenkeeper.io/)
 
 
+Fork created by Wheelhub, including a new option called `ignoreFilenames`
 
 This package provides support custom tags in a [YAML](http://yaml.org/) document that facilitate inclusion of external `.yaml` files, or directories of `.yaml` files. This functionality is of course frowned upon by the YAML core team, but I find YAML too damn useful as a configuration format to _not_ support inclusions. If you feel the same way, these tags will be helpful to you.
 
@@ -125,6 +126,7 @@ options:
 - `variableSuffix` _(default: '}')_ - When representing a variable, this string will follow the variable name.
 - `ignoreIndicator` _(default: '\_')_ - When a file or directory name is prefixed with this character, it and whatever contents it may hold will be ignored. **NOTE:** A whitelisted file path overrides this setting.
 - `ignoreTopLevelDir` _(default: true)_ - Specifies if the directory being included use its own name as the initial key.
+- `ignoreFilenames` _(default: false)_ - Specifies if the filenames found by the recursivity should be included as key.
 - `whitelist` _(default: [])_ - An array of paths to include regardless of any other settings.
 - `blacklist` _(default: [])_ - An array of paths to skip regardless of any other settings.
 - `excludeTopLevelDirSeparator` _(default: false)_ - Specifies if documents in the top level of the include path should be put under a key with an empty dir separator, or be added to the top level of the returned result.
